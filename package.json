@@ -11,8 +11,9 @@
     "emulator": "C:/Users/roman/AppData/Local/Android/Sdk/emulator/emulator -avd Pixel_2_XL_API_29"
   },
   "dependencies": {
-    "@react-native-community/masked-view": "^0.1.11",
+    "@react-native-masked-view/masked-view": "^0.2.6",
     "@react-navigation/native": "^6.0.6",
+    "@react-navigation/stack": "^6.0.11",
     "react": "17.0.2",
     "react-native": "0.66.3",
     "react-native-gesture-handler": "^1.10.3",
