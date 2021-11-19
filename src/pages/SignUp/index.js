@@ -30,7 +30,10 @@ const SignUp = ({navigation}) => {
           <Gap h={16} />
           <TextInput label="Password" placeholder="Type your password" />
           <Gap h={24} />
-          <Button title="Continue" />
+          <Button
+            title="Continue"
+            onPress={() => navigation.navigate('SignUpAddress')}
+          />
         </ScrollView>
       </View>
     </View>
