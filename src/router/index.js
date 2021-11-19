@@ -1,6 +1,7 @@
-import {createStackNavigator} from '@react-navigation/stack';
+import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import React from 'react';
 import {SignIn, SplashScreen} from '../pages';
+import SignUp from '../pages/SignUp';
 
 const Stack = createStackNavigator();
 
@@ -12,6 +13,11 @@ const Router = () => {
       }}>
       <Stack.Screen name="SplashScreen" component={SplashScreen} />
       <Stack.Screen name="SignIn" component={SignIn} />
+      <Stack.Screen
+        name="SignUp"
+        component={SignUp}
+        options={{...TransitionPresets.FadeFromBottomAndroid}}
+      />
     </Stack.Navigator>
   );
 };
