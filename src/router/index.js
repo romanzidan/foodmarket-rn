@@ -1,6 +1,12 @@
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import React from 'react';
-import {SignIn, SplashScreen, SignUp, SignUpAddress} from '../pages';
+import {
+  SignIn,
+  SplashScreen,
+  SignUp,
+  SignUpAddress,
+  SuccessSignUp,
+} from '../pages';
 
 const Stack = createStackNavigator();
 
@@ -21,6 +27,11 @@ const Router = () => {
         name="SignUpAddress"
         component={SignUpAddress}
         options={{...TransitionPresets.SlideFromRightIOS}}
+      />
+      <Stack.Screen
+        name="SuccessSignUp"
+        component={SuccessSignUp}
+        options={{...TransitionPresets.ScaleFromCenterAndroid}}
       />
     </Stack.Navigator>
   );
