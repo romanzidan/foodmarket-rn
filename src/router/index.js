@@ -1,14 +1,29 @@
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import React from 'react';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
   SignIn,
+  Home,
   SplashScreen,
   SignUp,
+  Order,
   SignUpAddress,
   SuccessSignUp,
+  Profile,
 } from '../pages';
 
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+const MainApp = () => {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Order" component={Order} />
+      <Tab.Screen name="Profile" component={Profile} />
+    </Tab.Navigator>
+  );
+};
 
 const Router = () => {
   return (
@@ -31,6 +46,11 @@ const Router = () => {
       <Stack.Screen
         name="SuccessSignUp"
         component={SuccessSignUp}
+        options={{...TransitionPresets.ScaleFromCenterAndroid}}
+      />
+      <Stack.Screen
+        name="MainApp"
+        component={MainApp}
         options={{...TransitionPresets.ScaleFromCenterAndroid}}
       />
     </Stack.Navigator>
