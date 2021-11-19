@@ -25,7 +25,7 @@ export default SuccessSignUp;
 const styles = StyleSheet.create({
   page: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#FAFAFC',
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 80,
