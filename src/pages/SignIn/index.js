@@ -3,12 +3,13 @@ import {StyleSheet, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {Button, Header, TextInput, Gap} from '../../components';
 
-export default function SignIn() {
+export default function SignIn({navigation}) {
   return (
     <View style={styles.page}>
       <Header title="Sign In" subTitle="Find your best ever meal" />
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={styles.container}>
+
+      <View style={styles.container}>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <TextInput
             label="Email Address"
             placeholder="Type your email address"
@@ -18,9 +19,13 @@ export default function SignIn() {
           <Gap h={24} />
           <Button title="Sign In" />
           <Gap h={12} />
-          <Button title="Create New Account" secondary />
-        </View>
-      </ScrollView>
+          <Button
+            title="Create New Account"
+            secondary
+            onPress={() => navigation.navigate('SignUp')}
+          />
+        </ScrollView>
+      </View>
     </View>
   );
 }
@@ -30,10 +35,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   container: {
+    flex: 1,
     backgroundColor: 'white',
     marginTop: 24,
     paddingHorizontal: 24,
     paddingVertical: 26,
-    flex: 1,
   },
 });
