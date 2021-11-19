@@ -1,6 +1,6 @@
 import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
-import {Gap, Header, TextInput, Button, Select} from '../../components';
+import {Button, Gap, Header, Select, TextInput} from '../../components';
 
 const SignUpAddress = ({navigation}) => {
   return (
@@ -22,7 +22,10 @@ const SignUpAddress = ({navigation}) => {
           <Gap h={16} />
           <Select label="City" />
           <Gap h={24} />
-          <Button title="Sign Up Now" />
+          <Button
+            title="Sign Up Now"
+            onPress={() => navigation.replace('SuccessSignUp')}
+          />
         </ScrollView>
       </View>
     </View>
