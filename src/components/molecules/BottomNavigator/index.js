@@ -57,11 +57,10 @@ const BottomNavigator = ({state, descriptors, navigation}) => {
         };
 
         return (
-          <View style={styles.btnContainer}>
+          <View key={index} style={styles.btnContainer}>
             <Pressable
               style={styles.btnTab}
               android_ripple={{color: '#FFC7A7', borderless: false, radius: 50}}
-              key={index}
               onPress={onPress}
               onLongPress={onLongPress}>
               <Icon label={label} focus={isFocused} />
